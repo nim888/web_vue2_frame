@@ -1,0 +1,64 @@
+    @charset "UTF-8";
+    @import "../../sass/_kit/variables.scss";
+    .app-loading-wrap {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        .object-area {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            animation: loading-object-area 1s infinite;
+            .object {
+                position: absolute;
+                width: 35%;
+                height: 35%;
+                border-radius: 50%;
+            }
+            #object1 {
+                top: 0;
+                left: 0;
+                animation: loading-object1 1s infinite;
+            }
+            #object2 {
+                top: 0;
+                right: 0;
+                animation: loading-object2 1s infinite;
+            }
+            #object3 {
+                bottom: 0;
+                left: 0;
+                animation: loading-object3 1s infinite;
+            }
+            #object4 {
+                bottom: 0;
+                right: 0;
+                animation: loading-object4 1s infinite;
+            }
+            @keyframes loading-object-area {
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            @keyframes loading-object1 {
+                50% {
+                    transform: translate(95%, 95%);
+                }
+            }
+            @keyframes loading-object2 {
+                50% {
+                    transform: translate(-95%, 95%);
+                }
+            }
+            @keyframes loading-object3 {
+                50% {
+                    transform: translate(95%, -95%);
+                }
+            }
+            @keyframes loading-object4 {
+                50% {
+                    transform: translate(-95%, -95%);
+                }
+            }
+        }
+    }

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+@import "../../sass/_kit/variables.scss";
+.app-frame-wrap {
+    &.loading .app-frame-body {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .app-frame-body {
+        transition: opacity .5s;
+        .body-wrap {
+            .no-more {
+                height: $rem*150;
+                line-height: $rem*220;
+                font-size: $rem*28;
+                text-align: center;
+                color: #909090;
+                img {
+                    width: $rem*158;
+                    height: $rem*129;
+                    margin-top: $rem*21;
+                }
+            }
+        }
+    }
+    .page-loading-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 60;
+        background: #fff;
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: $rem*330;
+            height: $rem*329;
+            margin-left: -$rem*165;
+            margin-top: -$rem*164.5;
+        }
+    }
+}

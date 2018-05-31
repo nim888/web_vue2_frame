@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@import "../../sass/_kit/variables.scss";
+.popinvites {
+    .bg {
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+    }
+    .info {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1001;
+        padding: $rem*20 $rem*50;
+        width: 100%;
+        .closebtn {
+            width: $rem*70;
+            height: $rem*70;
+            display: block;
+            position: fixed;
+            right: $rem*20;
+            top: $rem*40;
+            z-index: 1001;
+            background: url(data:image/png;base64,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) no-repeat center center;
+            background-size: 98%;
+        }
+        .heads {
+            width: 100%;
+            padding: $rem*80 0 0 0;
+            overflow: hidden;
+            color: #333;
+            p.tl {
+                font-size: $rem*40;
+                line-height: $rem*50;
+                text-align: center;
+                padding-bottom: $rem*20;
+            }
+            .decs {
+                background: #f3f3f3;
+                border-radius: $rem*20;
+                padding: $rem*20 $rem*20 $rem*35 $rem*20;
+                overflow: hidden;
+                width: $rem*500;
+                margin: $rem*30 auto 0;
+                text-align: center;
+                h2 {
+                    font-size: $rem*34;
+                }
+                p {
+                    margin-top: $rem*10;
+                    color: #f72f2f;
+                    font-weight: 700;
+                    font-size: $rem*34;
+                }
+                input {
+                    overflow: hidden;
+                    margin: 0;
+                    padding: 0;
+                    height: 1px;
+                    opacity: 0;
+                    float: left;
+                }
+                button {
+                    width: $rem*280;
+                    height: $rem*70;
+                    line-height: $rem*66;
+                    margin: $rem*20 auto 0;
+                    border: 1px solid #000;
+                    box-shadow: 0 2px 0 #000;
+                    border-radius: $rem*40;
+                    color: #000;
+                    font-size: $rem*28;
+                    background: #fff238;
+                }
+                button:active {
+                    opacity: .6;
+                }
+            }
+        }
+        .bodys {
+            overflow: hidden;
+            padding-top: $rem*40;
+            text-align: center;
+            p {
+                font-size: $rem*30;
+                color: #333;
+            }
+            .pic {
+                margin-top: $rem*10;
+                width: $rem*500;
+                margin: 0 auto;
+                img {
+                    width: 100%;
+                    animation: showFails 2s forwards;
+                }
+                @keyframes showFails {
+                    0% {
+                        opacity: 0;
+                    }
+                    30% {
+                        opacity: .3;
+                    }
+                    60% {
+                        opacity: .6;
+                    }
+                    90% {
+                        opacity: .9;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

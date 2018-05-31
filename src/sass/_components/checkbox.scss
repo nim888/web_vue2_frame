@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+@import "../_kit/variables.scss";
+
+/*
+* 多选框
+<label class="ui-checkbox">
+    <input name=""/>
+    <div class="frame"></div>
+</label>
+*/
+.ui-checkbox{
+    input[type="checkbox"]{
+        display:none;
+        &:checked + .frame{
+            border-color:$primary-color;
+            background:$primary-color;
+            &:before{
+                height:$rem*5;
+            }
+            &:after{
+                height:$rem*10;
+            }
+        }
+    }
+
+    &-circle{
+        .frame{
+            border-radius:50%;
+        }
+    }
+    .frame{
+        width:$rem*20;
+        height:$rem*20;
+        background:#f1f1f1;
+        border:1px solid #DBDBDB;
+        position: relative;
+        display:block;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.3s;
+        transition-property: border background;
+        &:after,
+        &:before{
+            content:'';
+            background:#fff;
+            width:$rem*2;
+            position: absolute;
+            border-radius:$rem*2;
+            height:0;
+            // transition-timing-function: ease-in-out;
+            // transition-duration: 0.3s;
+            // transition-property: height;
+        }
+        &:before{
+            top:$rem*9;
+            left:$rem*6;
+            transform: rotate(-45deg);
+        }
+        &:after{
+            top:$rem*5;
+            left:$rem*10;
+            transform: rotate(45deg);
+        }
+    }
+}

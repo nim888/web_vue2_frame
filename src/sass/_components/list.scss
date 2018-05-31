@@ -1,0 +1,112 @@
+@charset "UTF-8";
+@import "../_kit/variables.scss";
+@import "../_kit/_mixin.scss";
+
+//<div class="orally-app">
+//<ul>
+//    <li>
+//        <span class="pic"><img src="images/temp01.jpg" /></span>
+//        <div class="info">
+//            <strong>金皇冠™扑克机</strong>
+//            <span><i></i>454.4MB</span>
+//            <samp>保证让你爱不释手的一款游戏，结合了德州扑克、Black Jack以及猜大小等多种规则，随着手里金币的提升，你可以购买新的头衔，这样能押注的上限也会提升，头衔达到一定等级后还会开放生涯模式，一步步的吸引做得很好。游戏最纠结的还是猜中以后的押大小，觉对让你心跳。另外他的成就系统也做的不错，可以看到所有用户的各项成就排名，对用户产生一个横向的推动刺激</samp>
+//        </div>
+//        <span class="btn-state">
+//        <button class="btn btn-primary"><i></i>下载</button>
+//                                        .class="down or update or open"
+//        </span>
+//    </li>
+//</ul>
+//</div>
+
+/**
+ * 列表样式
+ */
+
+.twoline{
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.list-app{
+    overflow: hidden; padding:0 $rem*15;
+    li{
+        padding:$rem*15 0; border-bottom: 1px solid $line; overflow: hidden;
+    }
+    li .pic{
+        float:left;
+        display: block;
+        width:$rem*75;
+        height:$rem*75;
+        border-radius: $rem*10;
+        overflow: hidden;
+        margin-right:$rem*10;
+        img{width: 100%; height:100%}
+    }
+    li .info{
+        float:left;
+        width:$rem*190;
+        overflow: hidden;
+        strong{
+            font-weight:500;
+            font-size:$rem*16;
+            color:$bigtl;
+            display: block;
+            margin-bottom: $rem*1.5;
+        }
+        span{
+            color:$dis;
+            font-size: $rem*12;
+            display: block;
+            i{
+                display: block;
+                float:left;
+                width:$rem*12;
+                height:$rem*12;
+                margin: $rem*2 $rem*5 0 0;
+                background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAlxJREFUSA3NVc9LVFEU/s74g5x+TYWGEBTJJGbQokVBLQrHVUUpTEExEG0kokkSXRSEq/6BiBatIiJIyCClFuqAlrhwUbRrNi3aJEFWNKnNvNN3B9/zjXNf80ZbdOG+e+758X33nHPfe8D/NHTs1A3NJDdVc6ZIWGedTm6n7yCc3NWwMcYvNAFyC71Q3QwHfTp7OhqWJBSBZs7GoE56GbQR886Vf0oAJ3+dgFtXQKWfJWtY2QdLFTPQmYtboOgtgVDdiV+5nhJdwKYiAX58S7P2sbJ4BwOaubShTL9KIf69arIG47ndbH0chcg+RJw4VFJWAhMoeMXnNGeWMVlEY1k58vi7MblDeLdNfROccUD3shx1rnFtq8wx7gNnFrX1tyOQ+ucEbecpW9cPbo6kTZzHmN57OfHsU7FEmunehfzSBA3MYp1DeEzINUmM3DNIXg90srsZi4vj1LWtmcKAi/RIx8gDF8MjMAp909WE3G+S6AHXIfwqDkQvS2L0oT+m5JrK0eE5SN1xOrz1O1WWpcBipFaDm7iSDFwgnThzGIX8jLuvuAqGCH7O5leSgedQcFo8OZQggf52Aqm6B22qg1Ysq5KHrq7Jqg2YnLVmYSdQG4FpJJ6wax+tVcvbYiw/HH2X2sjrtscDKb44eMrbtV86Ry+gOdrKsDTv+2fPxwhqL2t5Bl++8rOxfLtEXkJrDhH4vCSGzfcF0j60JJ0v7qJxWwu9bpFo3ugZYy1rbdHofzjmJPKaWdzk6z7lN/llOfjoJ/d3dOrkfSzIAMk6/PZAWce6dgQa/2IIivsDDaKwYnluoCwAAAAASUVORK5CYII=) no-repeat left center;
+                background-size: $rem*12
+            }
+        }
+        samp{
+            color:$dis;
+            font-size: $rem*12;
+            line-height:$rem*16;
+            @extend .twoline;
+        }
+    }
+    li .btn-state{
+        margin-top: 8%;
+        display: inline-block;
+        float: right;
+        button{
+            padding:$rem*6 $rem*10 $rem*6 $rem*8;
+            i{
+                display: inline-block;
+                float:left;
+                width:$rem*12;
+                height:$rem*12;
+                margin: $rem*2 $rem*1 0 0;
+            }
+            i.down{
+                background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAUlJREFUOBHtkq9LQ1EUx991ItgMS4KwatEgJmFhJkFBGCaryTRYVQyC2McQrNosa4L+B1ZhwTBmMAjCkmHp+vk+7pUr7/cw7sDnnXPvOfd7zzvcKCph1toBdEqURgtliqhZdRSWlxUsFPIFc0E/idn9/8+Q93UGDd8TsYE1v3behOu0GvZasKsOL2E7OKB4TPI02PsN2V9kcQevxOFFbfYOEr9sjHkhcQ59DsjLbPyxdhk/gEM4ojbeV86bbksYhVeIfZG4wdfxungFnmAdWu5iwr+WKqgSDtwiNiG8hyXYgg9okhviUy3xy2EVBx9Y78M3vMFOnhj5KLNDJWUIPNPpBuGEWB3nmgQ12FpeFUKjvLzLSWOqX36H8Nm4fGUnjU912INrfmuKzxw2uSxTU3uwCcfxw0Ssy+IE9ESqmkY2hgtG81j1cGH9D9UyZ7Z5HHF6AAAAAElFTkSuQmCC) no-repeat center center;
+                background-size: $rem*10;
+            }
+
+            i.update{
+                background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAAAXNSR0IArs4c6QAAAixJREFUOBGNlD1oU1EUx/83qaaIIKKgdRGLCpYMItoK6lCECjoIIora2lH8AK2bYic3FxcnEWmbZAnFQaXgoBn93CqCaEXFIlWpiFC0TXv83TxfkueLzbtw3z33nP/53e/n9L8yZD1yOirTHtp1yOaxP2E/UloF9bonjVJdzJmzjaTexr+T5DEgDwB8xJdWSu1a0H5ie6l36Z/SSfelnhEF5m0XifeAPNUSndUJ965eXLULtlVzusmAa4D2qM+9DmM14IhtAPSMOqp+YM4thKKGbcla9UFFoFvUok4G/+51qarYdAN7XMt0rinMJ3W7X2QfYwJlZnu1yqkYeduhIZvXiGWjgQS9nB0gd1Z3bJVXBzMs6zD2Yzb4ZQJEVNLLwTlN6ad2+0AAdOrCfhhVJuw5ZyhLLL3DZwRAq9yzyYSIRrJJZrm6BnTcrtRfeCN5M5+pFeDvGlB6AzKrYTvIwRxqlh+LO21myVMBcMwyGPcZwYMuEuiMJSzmKNpywt2s77mXteirJmi/AWqjbeOBXfeBxGVGF5jMtDJ64XNSgPbRjuMsVyAZNXz0ldi/n5xtw3WJ3Cs64maj4YKtZ//6os5FesFj+EzOcL2q9pZDb946+EGUGPUaZ3eLkX+EoUpbtLWa0QD2eWqeozyt7W4u1MSBZk45neHUBxGtAOz35j11KbWdLfLLnMB/Wf1uFDtS4sAwXLQ0NysLeBPJK6ll7GmO8ZWO6y0/EP9CYuUPwEyb/ydc0fIAAAAASUVORK5CYII=) no-repeat center center;
+                background-size: $rem*10;
+            }
+            i.open{
+                background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAXpJREFUOBG9VD1LA0EQfXOeEcVGkDSCH42lrWBlKiEWgkUsjMTKSrDwBwhptbNPsqTwo7RQsAyIYBmstLAUwSAKfoE6vjUQl1zuvBN0YWD2vX1v52aHA/59VXUWFS1jX/vj3C2Rh4zmyZeh8CE4Y55FQRpRGi+UNLpGrsKo0axB0xSjBqNDoRoSnQ2NFineZCwxDM89og/TNL5lfkLT8TDToKHRVZqsUzyHZdlpCXNyj2HMkKszajjUnhbnJEFD4Jh1T7JXR865ZpqRF4xgnpsVZOU1wBPwA2BBLgKYC2TkjdsDF3LzThW6fOLcY4NvGBOJla7A6C5KOmUhjw1O8wEGXD5xrhhEF+fgyzCxOlrwBz2MvjAx+3OF3Thln7fjOjfnUPgsYWtRLklthdHtuEerBt4x1k7E3qvackbp8WQ1tsISgSKqesdPu45tZA8Kh8VggVma/6JzC/noxQaeCXxgj4YpCyZagitOcw55ebC6797Z0n+zRNSVfQLf+1rvSjhZMQAAAABJRU5ErkJggg==) no-repeat center center;
+                background-size: $rem*10;
+            }
+        }
+    }
+
+}
+

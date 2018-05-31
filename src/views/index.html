@@ -1,0 +1,47 @@
+<!doctype html manifest="cache.appcache" >
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no" />
+    <title>点点娃娃机</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script>
+        window.addEventListener(('orientationchange' in window ? 'orientationchange' : 'resize'), (function() {
+            function c() {
+                var d = document.documentElement;
+                var cw = d.clientWidth || 750;
+                d.style.fontSize = (20 * (cw / 375)) > 40 ? 40 + 'px' : (20 * (cw / 375)) + 'px';
+            }
+            c();
+            return c;
+        })(), false);
+    </script>
+   </head>
+
+<body>
+    <app></app>
+    <a class="zhiCustomBtn"></a>
+    <script src="/common.js"></script>
+    <script src="/index.js"></script>
+    <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cspan style='display:none' id='cnzz_stat_icon_1270349707'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1270349707' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="//www.sobot.com/chat/frame/js/entrance.js?sysNum=2ce088b90d47456581f98e48d81cb579" id="zhichiScript" data-args="customBtn=true" class="zhiCustomBtn" ></script>
+    <script>
+        window.onload = function(){
+            //初始化智齿咨询组件实例
+            var zhiManager = (getzhiSDKInstance());
+            // 再调用load方法
+            zhiManager.on("load", function() {
+                zhiManager.initBtnDOM();
+            });
+            zhiManager.set('customBtn', 'true');
+        }
+    </script>
+</body>
+
+</html>

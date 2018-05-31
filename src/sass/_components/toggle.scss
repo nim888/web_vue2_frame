@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+@import "../_kit/variables.scss";
+
+/**
+ * 切换按钮
+ *
+ * 正常这种按钮组，需被label包含 这里可以通过点击文案和组件本身都能触发
+ * 组件效果；
+ *
+ * @example
+ *
+    <label class="ui-toggle">
+        <input type="checkbox" />
+        <div class="ui-track">
+            <span class="handle"></span>
+        </div>
+    </label>
+
+ */
+
+$default-color:#DBDBDB;
+
+.ui-toggle{
+    input{
+        display:none;
+        &:checked + .ui-track{
+            border-color:$primary-color;
+            background-color:$primary-color;
+            & .handle{
+                transform: translate3d($rem*20, 0, 0);
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+.ui-track{
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    transition-property: background-color, border;
+    display: block;
+    box-sizing: border-box;
+    width: $rem*51;
+    height: $rem*31;
+    border: solid $rem*2 $default-color;
+    border-radius: $rem*20;
+    background-color: $default-color;
+    content: ' ';
+    cursor: pointer;
+    pointer-events: none;
+    position:relative;
+    .handle{
+        transition: 0.3s cubic-bezier(0, 1.1, 1, 1.1);
+        transition-property: background-color, transform;
+        position: absolute;
+        display: block;
+        width: $rem*27;
+        height: $rem*27;
+        border-radius: $rem*27;
+        background-color: #fff;
+        top: 0;
+        left: 0;
+        box-shadow: 0 $rem*2 $rem*7 rgba(0, 0, 0, 0.35), 0 1px 1px rgba(0, 0, 0, 0.15);
+    }
+}

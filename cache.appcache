@@ -1,0 +1,27 @@
+# 2017-11-24 v1.0.0
+
+CACHE MANIFEST
+#v1.0.1
+
+CACHE:
+/favicon.ico
+https://asset-cdn.aldsd.net/page/static/iwanba/no@1x.png
+https://asset-cdn.aldsd.net/page/static/iwanba/no@2x.png
+https://asset-cdn.aldsd.net/page/static/iwanba/no@3x.png
+https://asset-cdn.aldsd.net/page/static/iwanba/no@4x.png
+https://asset-cdn.aldsd.net/page/static/iwanba/no@5x.png
+https://asset-cdn.aldsd.net/page/static/iwanba/no@6x.png
+https://asset-cdn.aldsd.net/page/static/iwanba/no@7x.png
+https://asset-cdn.aldsd.net/page/static/iwanba/no@8x.png
+https://asset-cdn.aldsd.net/page/static/ddwwj/mp3/wwj-bg1.mp3
+https://asset-cdn.aldsd.net/page/static/ddwwj/mp3/wwj-go.mp3
+https://asset-cdn.aldsd.net/page/static/ddwwj/mp3/wwj_fail.mp3
+https://asset-cdn.aldsd.net/page/static/ddwwj/mp3/wwj_success.mp3
+
+
+NETWORK:
+# 不需要缓存的
+
+FALLBACK:
+#访问不到的页面 跳转的页面
+#404.html

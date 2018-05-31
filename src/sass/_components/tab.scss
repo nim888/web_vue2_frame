@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+@import "../_kit/variables.scss";
+@import "../_kit/_mixin.scss";
+
+.ui-tab{
+    //滑动tab
+    &-slider{
+        .ui-tab-hd{
+
+        }
+        .ui-tab-bd{
+            display:flex;
+            transition: transform .6s ease-in-out;
+            width:100%;
+            //transform: attr(slider-index);
+            &-item{
+                justify-content: center;
+                display:flex;
+                width:100%;
+                flex-shrink:0;
+                display: block;
+            }
+        }
+    }
+    &-hd{
+        background:#fff;
+        display:box;
+        display:flex;
+        color:#646464;
+
+        &-item{
+            //float: left;
+            width:100%;
+            text-align:center;
+            .wrap{
+                display:inline-block;
+                height:100%;
+            }
+            &.active{
+                color:$primary-color;
+                span,
+                .wrap{
+                    border-bottom:$rem*2 solid $primary-color;
+                    display:inline-block;
+                    color:$primary-color;
+                }
+            }
+        }
+    }
+    &-bd{
+        @include clearfix();
+        &-item{
+            display:none;
+            &.active{
+                display:block;
+            }
+        }
+
+    }
+}

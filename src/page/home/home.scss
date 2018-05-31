@@ -1,0 +1,21 @@
+@charset "UTF-8";
+@import "../../sass/_kit/variables.scss";
+body {
+    background: #F5F4F9;
+}
+
+
+/* 引入字体库 */
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('../../assets/images/fz.TTF');
+}
+
+.home {
+    padding-bottom: $rem*120;
+    .info {
+        width: $rem*120;
+        /*设计稿实际尺寸*/
+    }
+}

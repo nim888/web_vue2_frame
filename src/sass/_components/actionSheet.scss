@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+@import "../_kit/variables.scss";
+@import "../_kit/_mixin.scss";
+//
+/**
+ * 弹出框
+ *
+    <div class="ui-actionsheet show">
+        <div class="ui-actionsheet-box" id="ui-actionsheet">
+            <div class="ui-actionsheet-menu">
+                <button class="btn btn-pure ui-actionsheet-item">示例菜单</button>
+                <button class="btn btn-pure ui-actionsheet-item">示例菜单</button>
+                <button class="btn btn-pure ui-actionsheet-item">示例菜单</button>
+                <button class="btn btn-pure ui-actionsheet-item">示例菜单</button>
+            </div>
+            <div class="ui-actionsheet-action">
+                <div class="btn btn-pure ui-actionsheet-item" id="actionsheet-cancel">取消</div>
+            </div>
+        </div>
+   </div>
+
+ */
+.ui-actionsheet{
+    background:rgba(0,0,0,.3);
+    transition: background .3s;
+    position: fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    z-index:99;
+    display:none;
+    &.show{
+        display:block;
+    }
+    &-box{
+        &.debut{
+            transform: translate(-50%,0);
+        }
+        z-index:100;
+        position:fixed;
+        left:50%;
+        bottom:$rem*10;
+        width:$rem*350;
+        transform: translate(-50%,105%);
+        transition: transform .3s, -webkit-transform .3s;
+    }
+    &-menu,
+    &-action{
+        background:#fff;
+        border-radius:$rem*12;
+    }
+    &-menu{
+       margin-bottom:$rem*10;
+    }
+    &-item{
+        height:$rem*58;
+        line-height:$rem*58;
+        text-align:center;
+        border-bottom:1px solid #dbdbdb;
+        &:last-child{
+            border:0;
+        }
+    }
+}

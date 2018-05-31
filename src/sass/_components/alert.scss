@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+@import "../_kit/variables.scss";
+@import "../_kit/_mixin.scss";
+//
+/**
+ * 弹出框
+ *
+    <div class="ui-alert show">
+        <div class="ui-alert-box">
+            <div class="ui-alert-bd">
+                这里是内容
+            </div>
+            <div class="ui-alert-ft">
+                <div class="btn-group">
+                    <button>暂不</button>
+                    <button class="focus">删除订单</button>
+                </div>
+            </div>
+        </div>
+   </div>
+
+ */
+.ui-alert{
+    background:rgba(0,0,0,.3);
+    position: fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    z-index:99;
+    display:none;
+    &.show{
+        display:block;
+    }
+    &-box{
+        width:$rem*284;
+        padding:$rem*15;
+        background:#fff;
+        border-radius:$rem*10;
+        position:fixed;
+        top:$rem*84;
+        left:50%;
+        transform: translate(-50%,0);
+        font-size:$rem*16;
+        color:#646464;
+        z-index:101;
+    }
+    &-bd{
+        padding:$rem*20 0;
+        text-align:center;
+    }
+    &-ft{
+        border-top:1px solid #DBDBDB;
+        padding:$rem*4 0;
+        margin-bottom:$rem*-15;
+        .btn-group{
+            display:flex;
+            button{
+                display:block;
+                height:$rem*44;
+                flex-basis:100%;
+                text-align:center;
+                line-height:$rem*44;
+                //焦点按钮
+                &.focus{
+                    color:$primary-color;
+                }
+                &:first-child{
+                    border-right:1px solid #dbdbdb;
+                }
+            }
+        }
+        @include clearfix();
+    }
+
+}
